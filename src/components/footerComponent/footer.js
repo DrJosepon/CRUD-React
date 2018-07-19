@@ -4,7 +4,7 @@ class Footer extends Component {
   render() {
     return (
       <footer>
-          Josepon 2018
+          Jose 2018
         </footer>
     );
   }
