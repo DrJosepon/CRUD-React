@@ -22,6 +22,9 @@ LOGO
              <li>
              <Link to="/Login" >Login</Link>
             </li>
+            <li>
+             <Link to="/TutorialAuth" >Tutorial Auth</Link>
+            </li>
             <li className="last">
             <Link to="/Contacts" >Contacts</Link>
             </li>
