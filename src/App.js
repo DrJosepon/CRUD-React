@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   Route, 
   Link,
-  Redirect
+  Redirect,
+  Switch
 } from 'react-router-dom';
 import { withRouter } from 'react-router';
 import { SecretRoute, AuthStatus } from  './services/authService';
@@ -29,12 +30,13 @@ class App extends Component {
   render() {
     return (
       <Router>
+        
         <div className="App">
 
-          <Header />
+          <Header /> 
 
           <AuthStatus/>
-
+          <Switch>
           <Route exact path='/' component={Homepage} />
 
           <SecretRoute exact path='/Products' component={Products} />
@@ -55,9 +57,12 @@ class App extends Component {
           
           <Route path="/Login" component={Login}/> 
 
+          <Route render={() => (<div> Sorry, this page does not exist. </div>)} />
+          </Switch >
           <Footer />
 
         </div>
+        
       </Router>
     );
   }
